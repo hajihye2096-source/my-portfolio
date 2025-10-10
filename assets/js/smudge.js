@@ -21,7 +21,7 @@
 
   function addSmudge(x, y) {
     const now = performance.now();
-    const size = 160 + Math.random() * 160; // smudge diameter
+    const size = 200 + Math.random() * 200; // increased smudge diameter
     const rotation = Math.random() * Math.PI * 2;
     smudges.push({ x, y, size, rotation, createdAt: now });
   }
@@ -36,14 +36,15 @@
       if (age > MAX_AGE_MS) continue;
 
       const t = age / MAX_AGE_MS; // 0..1
-      const alpha = 0.35 * (1 - t); // fade out over 1m
+      const alpha = 0.25 * (1 - t); // lighter opacity
 
-      // radial gradient from warm yellow to transparent
+      // radial gradient from light yellow to transparent
       const r = s.size * 0.5;
       const grd = ctx.createRadialGradient(s.x, s.y, 0, s.x, s.y, r);
-      grd.addColorStop(0, `rgba(255, 230, 0, ${alpha})`);
-      grd.addColorStop(0.5, `rgba(255, 210, 64, ${alpha * 0.5})`);
-      grd.addColorStop(1, 'rgba(255, 210, 64, 0)');
+      grd.addColorStop(0, `rgba(255, 248, 200, ${alpha})`);
+      grd.addColorStop(0.3, `rgba(255, 245, 180, ${alpha * 0.8})`);
+      grd.addColorStop(0.7, `rgba(255, 240, 160, ${alpha * 0.4})`);
+      grd.addColorStop(1, 'rgba(255, 240, 160, 0)');
 
       ctx.save();
       ctx.translate(s.x, s.y);
@@ -66,10 +67,17 @@
   }
   requestAnimationFrame(draw);
 
+  let lastSmudgeTime = 0;
+  const SMUDGE_INTERVAL = 16; // ~60fps for smoother lines
+
   function handleMove(e) {
+    const now = performance.now();
+    if (now - lastSmudgeTime < SMUDGE_INTERVAL) return;
+    
     const x = e.clientX;
     const y = e.clientY;
     addSmudge(x, y);
+    lastSmudgeTime = now;
   }
 
   window.addEventListener('pointermove', handleMove, { passive: true });

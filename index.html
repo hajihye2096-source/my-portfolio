@@ -41,33 +41,74 @@
         background: #f1f4f6; 
         border-radius: 12px; 
         overflow: hidden;
-        margin-bottom: 16px;
+        position: relative;
+        cursor: pointer;
       }
-      .project-img img { width: 100%; height: 100%; object-fit: cover; }
+      .project-img img { 
+        width: 100%; 
+        height: 100%; 
+        object-fit: cover; 
+        transition: transform 0.3s ease;
+      }
+      
+      .project-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 24px;
+        background: linear-gradient(transparent, rgba(0,0,0,0.7));
+        color: white;
+        z-index: 2;
+      }
+      
       .project-brand { 
-        margin: 0 0 4px; 
+        margin: 0 0 8px; 
         height: 20px;
+        filter: brightness(0) invert(1);
       }
       .project-title { 
-        margin: 0; 
-        font-size: 32px; 
+        margin: 0 0 4px; 
+        font-size: 24px; 
         font-weight: 700; 
-        line-height: 1.125;
-        color: #000;
+        line-height: 1.2;
+        color: white;
       }
       .project-label { 
-        margin: 4px 0 0; 
+        margin: 0; 
         font-family: "Inter", sans-serif;
-        font-size: 16px; 
+        font-size: 14px; 
         font-weight: 400;
-        color: #000;
+        color: rgba(255,255,255,0.8);
         line-height: 1.21;
+      }
+      
+      .project-hover-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.3);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 1;
+      }
+      
+      .project-item:hover .project-img img {
+        transform: scale(1.05);
+      }
+      
+      .project-item:hover .project-hover-overlay {
+        opacity: 1;
       }
 
       @media (max-width: 900px) {
         .projects-home { grid-template-columns: 1fr; }
         .hero-home h1 { font-size: 48px; }
         .hero-home p { font-size: 20px; }
+        .project-title { font-size: 20px; }
+        .project-overlay { padding: 16px; }
       }
     </style>
   </head>
@@ -95,33 +136,42 @@
         <article class="project-item">
           <a href="pages/project1.html" style="text-decoration: none; color: inherit;">
             <div class="project-img">
-            <img src="assets/img/project01-thumb.jpg" alt="Multi-order deliveries">
-          </div>
-          <img class="project-brand" src="assets/img/coupang-eats-logo.svg" alt="Coupang Eats">
-          <h2 class="project-title">Improving communication for multi-order deliveries</h2>
-          <p class="project-label">Coupang Eats</p>
-        </a>
-      </article>
+              <img src="assets/img/project01-thumb.jpg" alt="Multi-order deliveries">
+              <div class="project-overlay">
+                <img class="project-brand" src="assets/img/coupang-eats-logo.svg" alt="Coupang Eats">
+                <h2 class="project-title">Improving communication for multi-order deliveries</h2>
+                <p class="project-label">Coupang Eats</p>
+              </div>
+              <div class="project-hover-overlay"></div>
+            </div>
+          </a>
+        </article>
 
-      <article class="project-item">
-        <a href="pages/project2.html" style="text-decoration: none; color: inherit;">
-          <div class="project-img">
-            <img src="assets/img/project02-thumb.jpg" alt="Coupon Discovery">
-          </div>
-          <img class="project-brand" src="assets/img/coupang-eats-logo.svg" alt="Coupang Eats">
-          <h2 class="project-title">Coupon Discovery & Usability Improvement</h2>
-          <p class="project-label">Coupang Eats</p>
-        </a>
-      </article>
+        <article class="project-item">
+          <a href="pages/project2.html" style="text-decoration: none; color: inherit;">
+            <div class="project-img">
+              <img src="assets/img/project02-thumb.jpg" alt="Coupon Discovery">
+              <div class="project-overlay">
+                <img class="project-brand" src="assets/img/coupang-eats-logo.svg" alt="Coupang Eats">
+                <h2 class="project-title">Coupon Discovery & Usability Improvement</h2>
+                <p class="project-label">Coupang Eats</p>
+              </div>
+              <div class="project-hover-overlay"></div>
+            </div>
+          </a>
+        </article>
 
-      <article class="project-item">
-        <a href="pages/project3.html" style="text-decoration: none; color: inherit;">
-          <div class="project-img">
-            <img src="assets/img/project03-thumb.jpg" alt="IoT Platform">
-          </div>
-          <img class="project-brand" src="assets/img/coupang-eats-logo.svg" alt="Skelter Labs">
-            <h2 class="project-title">Open IoT platform that connects all smart devices</h2>
-            <p class="project-label">Coupang Eats</p>
+        <article class="project-item">
+          <a href="pages/project3.html" style="text-decoration: none; color: inherit;">
+            <div class="project-img">
+              <img src="assets/img/project03-thumb.jpg" alt="IoT Platform">
+              <div class="project-overlay">
+                <img class="project-brand" src="assets/img/coupang-eats-logo.svg" alt="Skelter Labs">
+                <h2 class="project-title">Open IoT platform that connects all smart devices</h2>
+                <p class="project-label">Coupang Eats</p>
+              </div>
+              <div class="project-hover-overlay"></div>
+            </div>
           </a>
         </article>
       </section>
@@ -130,17 +180,23 @@
     <footer class="site-footer">
       <div class="container">
         <div class="footer-inner">
-          <div class="footer-left">
+          <div class="footer-col footer-col-1">
             <p class="footer-text">If this project summary caught your interest,<br>let's connect.</p>
-          </div>
-          <div class="footer-center">
             <p class="footer-links">
               <a href="#" rel="noopener">LinkedIn</a>
               <a href="#" rel="noopener">Instagram</a>
               <a href="mailto:haji@example.com">Mail</a>
             </p>
           </div>
-          <div class="footer-right">
+          <div class="footer-col footer-col-2">
+            <p class="footer-text">I'd love to share more about my journey<br>feel free to reach out anytime.</p>
+            <p class="footer-links">
+              <a href="#" rel="noopener">LinkedIn</a>
+              <a href="#" rel="noopener">Instagram</a>
+              <a href="mailto:haji@example.com">Mail</a>
+            </p>
+          </div>
+          <div class="footer-col footer-col-3">
             <p class="credit">Design and vibe coded by Jihye ha, 2025</p>
           </div>
         </div>
