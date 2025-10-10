@@ -3,97 +3,177 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Open IoT platform that connects all smart devices</title>
+    <title>Open IoT platform that connects all smart devices - Jihye Ha</title>
     <base href="/my-portfolio/">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
     <style>
-      .site-main.container { width: min(1280px, 92%); }
-      
-      .section { padding: 32px 0; }
-      .section h2 { 
-        margin: 0 0 32px; 
-        font-size: 32px; 
-        font-weight: 700; 
-        letter-spacing: -0.32px;
-        line-height: 1.2;
+      body { 
+        background: #fff; 
+        color: #000;
       }
       
-      .brand-logo { height: 28px; width: auto; margin-bottom: 24px; }
-      .lead { 
-        font-size: 56px; 
-        line-height: 1.2; 
-        font-weight: 700; 
-        letter-spacing: -0.56px; 
-        margin: 0 0 32px;
+      .project3-main {
+        width: min(1280px, 92%);
+        margin: 0 auto;
+        padding-top: 184px;
+        padding-bottom: 80px;
+      }
+      
+      .project3-content {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+      }
+      
+      /* Header Section */
+      .project-header {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
         text-align: center;
       }
       
-      .meta-row { 
-        display: grid; 
-        grid-template-columns: repeat(3, 1fr); 
-        gap: 24px; 
-        margin-bottom: 40px;
-        text-align: center;
-      }
-      .meta-col h3 { 
-        margin: 0 0 8px; 
-        font-family: "Space Grotesk", sans-serif; 
-        font-weight: 700; 
-        font-size: 16px;
-        letter-spacing: -0.16px;
-        line-height: 1.2;
-      }
-      .meta-col p { 
-        margin: 0; 
-        font-family: "Inter", sans-serif; 
-        font-weight: 400; 
-        font-size: 16px;
-        letter-spacing: -0.16px;
-        line-height: 1.2;
-        white-space: pre-line;
+      .project-logo {
+        height: 40px;
+        width: auto;
       }
       
-      .body-text { 
-        font-size: 16px; 
-        line-height: 1.8; 
+      .project-title {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 56px;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: -0.56px;
+        margin: 0;
+        color: #000;
+        text-align: center;
+      }
+      
+      /* Main Image */
+      .project-main-image {
+        width: 100%;
+        height: 720px;
+        border-radius: 12px;
+        overflow: hidden;
+        position: relative;
+      }
+      
+      .project-main-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      
+      /* Project Info */
+      .project-info {
+        display: flex;
+        gap: 48px;
+        width: 100%;
+      }
+      
+      .info-section {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+      }
+      
+      .info-label {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: -0.16px;
+        margin: 0;
+        color: #000;
+        text-transform: uppercase;
+      }
+      
+      .info-content {
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
         font-weight: 400;
-        margin: 0 0 32px;
+        line-height: 1.2;
+        letter-spacing: -0.16px;
+        margin: 0;
+        color: #000;
       }
       
-      .goal-row { 
-        display: grid; 
-        grid-template-columns: repeat(2, 1fr); 
-        gap: 24px; 
+      .info-content p {
+        margin: 0;
       }
-      .goal-card { 
-        background: #f1f4f6; 
-        border-radius: 12px; 
-        padding: 24px; 
-        text-align: center; 
+      
+      /* Divider Line */
+      .divider-line {
+        width: 100%;
+        height: 1px;
+        background: #000;
+        margin: 0;
       }
-      .goal-card h3 { 
-        margin: 0 0 12px; 
-        font-family: "Pretendard", sans-serif;
-        font-size: 20px; 
-        font-weight: 700; 
-        letter-spacing: -0.4px;
-        line-height: 1.4;
+      
+      /* Gallery Section */
+      .project-gallery {
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        width: 100%;
       }
-      .goal-card p { 
-        margin: 0; 
-        font-size: 16px; 
-        line-height: 1.8;
+      
+      .gallery-item {
+        width: 100%;
+        aspect-ratio: 2560/1441;
+        border-radius: 12px;
+        overflow: hidden;
+        position: relative;
       }
-
+      
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      
+      .gallery-item:last-child {
+        aspect-ratio: 2560/1440;
+      }
+      
+      /* Mobile Responsive */
       @media (max-width: 900px) {
-        .meta-row, .goal-row { grid-template-columns: 1fr; }
-        .lead { font-size: 40px; }
+        .project3-main {
+          padding-top: 120px;
+        }
+        
+        .project-title {
+          font-size: 32px;
+        }
+        
+        .project-main-image {
+          height: 400px;
+        }
+        
+        .project-info {
+          flex-direction: column;
+          gap: 24px;
+        }
+        
+        .info-section {
+          text-align: left;
+        }
+        
+        .project-gallery {
+          gap: 40px;
+        }
+        
+        .gallery-item {
+          aspect-ratio: 16/9;
+        }
       }
     </style>
   </head>
   <body>
-    <canvas id="smudge-canvas" aria-hidden="true"></canvas>
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="index.html">Product designer. Jihye Ha</a>
@@ -105,77 +185,77 @@
       </div>
     </header>
 
-    <main class="site-main container">
-      <section class="section">
-        <img class="brand-logo" src="assets/img/skelter-logo.svg" alt="Skelter Labs">
-        <h1 class="lead">Open IoT platform that connects all smart devices</h1>
-        
-        <div class="meta-row">
-          <div class="meta-col">
-            <h3>Role</h3>
-            <p>Product designer</p>
-          </div>
-          <div class="meta-col">
-            <h3>Team</h3>
-            <p>1 PM
-1 Product designer
-2 Front Engineers
-1 BE engineers
-QA</p>
-          </div>
-          <div class="meta-col">
-            <h3>Timeline</h3>
-            <p>2023 Q4</p>
-          </div>
-        </div>
+    <main class="project3-main">
+      <div class="project3-content">
+        <!-- Project Header -->
+        <section class="project-header">
+          <img class="project-logo" src="assets/img/project3-logo.png" alt="Project Logo">
+          <h1 class="project-title">Open IoT platform that connects all smart devices</h1>
+        </section>
 
-        <div class="project-main" style="margin: 40px 0;">
-          <img src="assets/img/project03-thumb.jpg" alt="Project main visual" style="width: 100%; border-radius: 12px;">
-        </div>
-      </section>
+        <!-- Main Project Image -->
+        <section class="project-main-image">
+          <img src="assets/img/project3-main-1.png" alt="Project main visual">
+        </section>
 
-      <section class="section">
-        <h2>Background</h2>
-        <p class="body-text">스켈터랩스는 모든 스마트 기기를 연결하는 오픈 IoT 플랫폼을 개발하고 있습니다. 사용자들이 다양한 브랜드의 스마트 기기들을 하나의 앱에서 통합 관리할 수 있도록 하는 것이 목표입니다.</p>
-      </section>
-
-      <section class="section">
-        <h2>Goal</h2>
-        <div class="goal-row">
-          <div class="goal-card">
-            <h3>User Goal</h3>
-            <p>다양한 브랜드의 스마트 기기를 하나의 플랫폼에서 통합 관리할 수 있을 것</p>
+        <!-- Project Info -->
+        <section class="project-info">
+          <div class="info-section">
+            <h2 class="info-label">Team</h2>
+            <div class="info-content">
+              <p>1 PM</p>
+              <p>2 Product designer</p>
+              <p>6 Front Engineers(AOS/iOS)</p>
+              <p>3 BE engineers</p>
+            </div>
           </div>
-          <div class="goal-card">
-            <h3>Business Goal</h3>
-            <p>IoT 생태계의 중심이 되는 플랫폼으로 성장하고, 사용자 만족도를 높일 것</p>
+          
+          <div class="info-section">
+            <h2 class="info-label">Role</h2>
+            <div class="info-content">
+              <p>Illustration</p>
+              <p>UX research</p>
+              <p>UI flow chart</p>
+              <p>GUI design</p>
+              <p>Design QA</p>
+            </div>
           </div>
-        </div>
-      </section>
+          
+          <div class="info-section">
+            <h2 class="info-label">Timeline</h2>
+            <div class="info-content">
+              <p>2019 Q1-Q3</p>
+            </div>
+          </div>
+        </section>
 
-      <section class="section">
-        <h2>Reflection</h2>
-        <p class="body-text">IoT 플랫폼의 복잡성을 단순화하여 사용자에게 직관적인 경험을 제공하는 것이 핵심이었습니다. 다양한 기기와의 호환성을 유지하면서도 사용자 친화적인 인터페이스를 구현하는 것이 가장 큰 도전이었습니다.</p>
-      </section>
+        <!-- Divider Line -->
+        <hr class="divider-line">
+
+        <!-- Project Gallery -->
+        <section class="project-gallery">
+          <div class="gallery-item">
+            <img src="assets/img/project3-main-2.png" alt="Project detail 1">
+          </div>
+          <div class="gallery-item">
+            <img src="assets/img/project3-main-3.png" alt="Project detail 2">
+          </div>
+          <div class="gallery-item">
+            <img src="assets/img/project3-main-4.png" alt="Project detail 3">
+          </div>
+        </section>
+      </div>
     </main>
 
     <footer class="site-footer">
       <div class="container">
         <div class="footer-inner">
-          <div class="footer-col footer-col-1">
-            <p class="footer-text">If this project summary caught your interest,<br>let's connect.</p>
-            <p class="footer-links">
-              <a href="#" rel="noopener">LinkedIn</a>
-              <a href="#" rel="noopener">Instagram</a>
-              <a href="mailto:haji@example.com">Mail</a>
-            </p>
-          </div>
-          <div class="footer-col footer-col-2">
+          <div class="footer-col footer-col-1-2">
             <p class="footer-text">I'd love to share more about my journey<br>feel free to reach out anytime.</p>
             <p class="footer-links">
-              <a href="#" rel="noopener">LinkedIn</a>
-              <a href="#" rel="noopener">Instagram</a>
-              <a href="mailto:haji@example.com">Mail</a>
+              <a href="https://www.linkedin.com/in/hacci/" rel="noopener">LinkedIn</a>
+              <a href="https://www.instagram.com/hajihye00/" rel="noopener">Instagram</a>
+              <a href="mailto:hajihye2096@gmail.com">Mail</a>
             </p>
           </div>
           <div class="footer-col footer-col-3">
@@ -184,7 +264,5 @@ QA</p>
         </div>
       </div>
     </footer>
-
-    <script src="./assets/js/smudge.js"></script>
   </body>
 </html>
