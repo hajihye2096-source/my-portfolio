@@ -137,11 +137,11 @@ body {
   position: relative;
   z-index: 2;
 }
-.footer-inner { 
-  display: grid; 
-  grid-template-columns: 1fr 1fr 1fr; 
-  gap: 48px; 
-  padding: 48px 80px; 
+.footer-inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 48px;
+  padding: 48px 80px;
   max-width: 1280px;
   margin: 0 auto;
 }
@@ -151,7 +151,7 @@ body {
   flex-direction: column;
 }
 
-.footer-col-1, .footer-col-2 {
+.footer-col-1-2 {
   gap: 16px;
 }
 
@@ -162,7 +162,7 @@ body {
 
 .footer-text { 
   margin: 0; 
-  font-size: 18px; 
+  font-size: 32px; 
   font-weight: 400;
   line-height: 1.4;
   color: #000; 
@@ -212,6 +212,10 @@ body {
   .footer-links {
     flex-wrap: wrap;
     gap: 16px;
+  }
+  
+  .footer-text {
+    font-size: 24px;
   }
 }
 
