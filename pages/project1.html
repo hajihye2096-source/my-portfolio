@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Improving communication for multi-order deliveries</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Inter:wght@400;700&family=Pretendard:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Users/hajihye/Desktop/25portfolio_web/assets/css/styles.css">
+    <style>
+      .site-main.container { width: min(1280px, 92%); }
+      
+      .section { padding: 32px 0; }
+      .section h2 { 
+        margin: 0 0 32px; 
+        font-size: 32px; 
+        font-weight: 700; 
+        letter-spacing: -0.32px;
+        line-height: 1.2;
+      }
+      
+      .brand-logo { height: 28px; width: auto; margin-bottom: 24px; }
+      .lead { 
+        font-size: 56px; 
+        line-height: 1.2; 
+        font-weight: 700; 
+        letter-spacing: -0.56px; 
+        margin: 0 0 32px;
+        text-align: center;
+      }
+      
+      .meta-row { 
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 24px; 
+        margin-bottom: 40px;
+        text-align: center;
+      }
+      .meta-col h3 { 
+        margin: 0 0 8px; 
+        font-family: "Space Grotesk", sans-serif; 
+        font-weight: 700; 
+        font-size: 16px;
+        letter-spacing: -0.16px;
+        line-height: 1.2;
+      }
+      .meta-col p { 
+        margin: 0; 
+        font-family: "Inter", sans-serif; 
+        font-weight: 400; 
+        font-size: 16px;
+        letter-spacing: -0.16px;
+        line-height: 1.2;
+        white-space: pre-line;
+      }
+      
+      .body-text { 
+        font-size: 16px; 
+        line-height: 1.8; 
+        font-weight: 400;
+        margin: 0 0 32px;
+      }
+      
+      .goal-row { 
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 24px; 
+      }
+      .goal-card { 
+        background: #f1f4f6; 
+        border-radius: 12px; 
+        padding: 24px; 
+        text-align: center; 
+      }
+      .goal-card h3 { 
+        margin: 0 0 12px; 
+        font-family: "Pretendard", sans-serif;
+        font-size: 20px; 
+        font-weight: 700; 
+        letter-spacing: -0.4px;
+        line-height: 1.4;
+      }
+      .goal-card p { 
+        margin: 0; 
+        font-size: 16px; 
+        line-height: 1.8;
+      }
+
+      .problem-list { margin: 32px 0; }
+      .problem-item { margin-bottom: 32px; }
+      .problem-item .number { 
+        font-size: 24px; 
+        font-weight: 700; 
+        margin: 0 0 8px;
+        line-height: 1.276;
+      }
+      .problem-item .text { 
+        font-size: 16px; 
+        line-height: 1.8; 
+        margin: 0;
+      }
+      .problem-item .solution { 
+        font-size: 16px; 
+        line-height: 1.8; 
+        margin: 8px 0 0;
+        color: #00a7f6;
+        font-weight: 700;
+      }
+
+      .solution-cards { 
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 24px; 
+        margin-top: 32px;
+      }
+      .solution-card { 
+        background: #e0f6ff; 
+        border-radius: 12px; 
+        padding: 24px; 
+        text-align: center; 
+      }
+      .solution-card h3 { 
+        margin: 0 0 12px; 
+        font-size: 20px; 
+        font-weight: 700;
+        line-height: 1.8;
+      }
+      .solution-card p { 
+        margin: 0; 
+        font-size: 20px; 
+        line-height: 1.8;
+      }
+
+      .test-box { 
+        background: #f1f4f6; 
+        border-radius: 12px; 
+        padding: 24px;
+        margin-top: 32px;
+      }
+      .test-box .question { 
+        font-size: 16px; 
+        font-weight: 700; 
+        line-height: 1.8;
+        margin: 0 0 12px;
+        text-align: center;
+      }
+      .test-box .method { 
+        font-size: 16px; 
+        line-height: 1.8;
+        margin: 0 0 12px;
+        text-align: center;
+      }
+      .test-result { 
+        background: rgba(255,255,255,0.5); 
+        border-radius: 8px; 
+        padding: 16px;
+        margin-top: 12px;
+      }
+      .test-result .label { 
+        font-size: 16px; 
+        line-height: 1.8;
+        margin: 0 0 8px;
+        text-align: center;
+      }
+      .test-result .result { 
+        font-size: 20px; 
+        font-weight: 700;
+        line-height: 1.8;
+        margin: 0;
+        text-align: center;
+      }
+
+      @media (max-width: 900px) {
+        .meta-row, .goal-row, .solution-cards { grid-template-columns: 1fr; }
+        .lead { font-size: 40px; }
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="smudge-canvas" aria-hidden="true"></canvas>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="../index.html">Product designer. Jihye Ha</a>
+        <nav class="nav">
+          <a href="../index.html#works">Work</a>
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#resume">Résumé</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main container">
+      <section class="section">
+        <img class="brand-logo" src="../assets/img/coupang-eats-logo.svg" alt="Coupang Eats">
+        <h1 class="lead">Improving communication for multi-order deliveries</h1>
+        
+        <div class="meta-row">
+          <div class="meta-col">
+            <h3>Role</h3>
+            <p>Product designer</p>
+          </div>
+          <div class="meta-col">
+            <h3>Team</h3>
+            <p>1 PM
+1 Product designer
+2 Front Engineers(AOS/iOS)
+1 BE engineers
+QA
+UX Writer</p>
+          </div>
+          <div class="meta-col">
+            <h3>Timeline</h3>
+            <p>2024 Q3</p>
+          </div>
+        </div>
+
+        <div class="project-main" style="margin: 40px 0;">
+          <img src="../assets/img/project1-main.jpg" alt="Project main visual" style="width: 100%; border-radius: 12px;">
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Background</h2>
+        <p class="body-text">쿠팡이츠는 주문당 수익을 높이기 위해 한 번에 더 많은 주문을 처리할 수 있도록, 3건 이상의 주문을 한 번에 배달하는 새로운 시스템을 도입했다.   하지만 기존 배달 현황 화면은 최대 2건까지만 표시할 수 있어, 변경된 배달 방식에 적절하게 대응하지 못하고 있었다. 이로 인해 고객들은 여러 건의 배달이 동시에 이루어지는 상황을 한눈에 확인하기 어렵다는 불편을 겪고 있었다. 이 같은 문제를 해결하기 위해서는, 여러 주문의 배달 현황을 실시간으로 보다 명확하게 안내하는 페이지로 개선하는 것이 반드시 필요하다고 판단했다.</p>
+      </section>
+
+      <section class="section">
+        <h2>Goal</h2>
+        <div class="goal-row">
+          <div class="goal-card">
+            <h3>User Goal</h3>
+            <p>여러 건의 배달 상태를 명확하게 이해하고, 도착 순서를 예측할 수 있을 것</p>
+          </div>
+          <div class="goal-card">
+            <h3>Business Goal</h3>
+            <p>배달 관련 CS 문의율을 낮추고, 서비스 신뢰도 및 만족도를 높일 것</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Problem & Hypothesis</h2>
+        <div class="problem-list">
+          <div class="problem-item">
+            <p class="number">01 </p>
+            <p class="text">'근처매장, 근처배달' 배달 태그가 한 화면에 여러개겹쳐 보여 사용자가 배달 상황을 혼동했다.</p>
+            <p class="solution">→배달 상태를 순서 위주로 단순화하면, 사용자가 현재 상황을 더 쉽게 파악할 수 있을 것이다.'</p>
+          </div>
+          <div class="problem-item">
+            <p class="number">02</p>
+            <p class="text">어떤 주문이 먼저 도착할지 알기 어려워 배달 단계 인지가 어려웠다.</p>
+            <p class="solution">→주문별 진행 상태를 단계별로 시각화하고, 그에 맞는 안내 문구를 제공하면 고객의 인지 부담이 감소할 것이다.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Solution Direction</h2>
+        <p class="body-text">복잡했던 배달 정보를 순서와 맥락에 따라 정리해 단순화하였다. 
+이를 통해 사용자는 여러 주문 상황에서도 혼란 없이 명확하고 일관된 경험을 할 수 있도록 하였다.</p>
+        
+        <div class="solution-cards">
+          <div class="solution-card">
+            <h3>배달 순서 기반 구조 정리</h3>
+            <p>배달 과정을 순서 중심으로 재구성해 사용자가 여러 주문의 진행 상황을 한눈에 이해할 수 있도록 했다.</p>
+          </div>
+          <div class="solution-card">
+            <h3>상태 표현 단순화</h3>
+            <p>불필요한 정보와 시각 요소를 줄여, 핵심 단계만 명확하게 인식되도록 개선했다.
+</p>
+          </div>
+          <div class="solution-card">
+            <h3>사용자 친화적 문구 도입</h3>
+            <p>자연스럽고 개인화된 문장으로 안내해 다중배달 상황에서도 익숙하고 신뢰감 있는 경험을 만들었다.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>User Test</h2>
+        <div class="test-box">
+          <p class="question">다중배달 환경에서 사용자가 배달 상태를 명확히 이해하고, 도착 순서를 예상할 수 있는가?</p>
+          <p class="method">Figma 인터랙티브 프로토타입 기반 테스트, 인터뷰 및 시나리오 기반 태스크 수행 (탐색–이해–예상)</p>
+          <div class="test-result">
+            <p class="label">Result</p>
+            <p class="result">4명 중 4명 모두 시나리오 내에서 다른 배달과 본인 배달의 상태를 이해함</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Reflection</h2>
+        <p class="body-text">여러 배달이 동시에 진행될 때 사용자가 혼란스럽지 않도록, 정보를 순서와 맥락 중심으로 단순화했다. 이를 통해 여러 주문 상황에서도 명확하고 일관된 배달 경험을 제공할 수 있었다.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-note">If this project summary caught your interest,  let's connect.</p>
+        <div class="footer-right">
+          <p class="footer-links">
+            <a href="#" rel="noopener">LinkedIn</a>
+            <a href="#" rel="noopener">Instagram</a>
+            <a href="mailto:haji@example.com">Mail</a>
+          </p>
+          <p class="credit">Design and vibe coded by Jihye ha, 2025</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+

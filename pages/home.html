@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio - Jihye Ha</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Users/hajihye/Desktop/25portfolio_web/assets/css/styles.css">
+    <style>
+      body { background: #fff; }
+      .site-main.container { width: min(1280px, 92%); padding-top: 120px; }
+      
+      .hero-home { padding: 28px 0 40px; }
+      .hero-home h1 { 
+        margin: 0 0 16px; 
+        font-size: 64px; 
+        font-weight: 700;
+        line-height: 1.276; 
+        letter-spacing: 0;
+        color: #000;
+      }
+      .hero-home p { 
+        margin: 0 0 4px; 
+        color: #000; 
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.276;
+      }
+
+      .projects-home { 
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 24px; 
+        padding: 16px 0 80px; 
+      }
+      .project-item { position: relative; }
+      .project-img { 
+        width: 100%; 
+        aspect-ratio: 628/400; 
+        background: #f1f4f6; 
+        border-radius: 12px; 
+        overflow: hidden;
+        margin-bottom: 16px;
+      }
+      .project-img img { width: 100%; height: 100%; object-fit: cover; }
+      .project-brand { 
+        margin: 0 0 4px; 
+        height: 20px;
+      }
+      .project-title { 
+        margin: 0; 
+        font-size: 32px; 
+        font-weight: 700; 
+        line-height: 1.125;
+        color: #000;
+      }
+      .project-label { 
+        margin: 4px 0 0; 
+        font-family: "Inter", sans-serif;
+        font-size: 16px; 
+        font-weight: 400;
+        color: #000;
+        line-height: 1.21;
+      }
+
+      @media (max-width: 900px) {
+        .projects-home { grid-template-columns: 1fr; }
+        .hero-home h1 { font-size: 48px; }
+        .hero-home p { font-size: 20px; }
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="smudge-canvas" aria-hidden="true"></canvas>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="../index.html">Product designer. Jihye Ha</a>
+        <nav class="nav">
+          <a href="../index.html#works">Work</a>
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#resume">Résumé</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main container">
+      <section class="hero-home">
+        <h1>Currently a product designer at<br>Coupang Etas</h1>
+        <p>I build cultures that empower people to move forward.</p>
+        <p>I measure success by the positive feeling I bring to our teams and the people who use what we build.</p>
+      </section>
+
+      <section class="projects-home">
+        <article class="project-item">
+          <div class="project-img">
+            <img src="../assets/img/project01-thumb.jpg" alt="Multi-order deliveries">
+          </div>
+          <img class="project-brand" src="../assets/img/coupang-eats-logo.svg" alt="Coupang Eats">
+          <h2 class="project-title">Improving communication for multi-order deliveries</h2>
+          <p class="project-label">Coupang Eats</p>
+        </article>
+
+        <article class="project-item">
+          <div class="project-img">
+            <img src="../assets/img/project02-thumb.jpg" alt="Coupon Discovery">
+          </div>
+          <img class="project-brand" src="../assets/img/coupang-eats-logo.svg" alt="Coupang Eats">
+          <h2 class="project-title">Coupon Discovery & Usability Improvement</h2>
+          <p class="project-label">Coupang Eats</p>
+        </article>
+
+        <article class="project-item">
+          <div class="project-img">
+            <img src="../assets/img/project03-thumb.jpg" alt="IoT Platform">
+          </div>
+          <img class="project-brand" src="../assets/img/skelter-logo.svg" alt="Skelter Labs">
+          <h2 class="project-title">Open IoT platform that connects all smart devices</h2>
+          <p class="project-label">Coupang Eats</p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-note">I'd love to share more about my journey<br>feel free to reach out anytime.</p>
+        <div class="footer-right">
+          <p class="footer-links">
+            <a href="#" rel="noopener">LinkedIn</a>
+            <a href="#" rel="noopener">Instagram</a>
+            <a href="mailto:haji@example.com">Mail</a>
+          </p>
+          <p class="credit">Design and vibe coded by Jihye ha, 2025</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/Users/hajihye/Desktop/25portfolio_web/assets/js/smudge.js"></script>
+  </body>
+</html>

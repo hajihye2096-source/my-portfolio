@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Coupon Discovery & Usability Improvement</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Inter:wght@400;700&family=Pretendard:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Users/hajihye/Desktop/25portfolio_web/assets/css/styles.css">
+    <style>
+      .site-main.container { width: min(1280px, 92%); }
+      
+      .section { padding: 32px 0; }
+      .section h2 { 
+        margin: 0 0 32px; 
+        font-size: 32px; 
+        font-weight: 700; 
+        letter-spacing: -0.32px;
+        line-height: 1.2;
+      }
+      
+      .brand-logo { height: 28px; width: auto; margin-bottom: 24px; }
+      .lead { 
+        font-size: 56px; 
+        line-height: 1.2; 
+        font-weight: 700; 
+        letter-spacing: -0.56px; 
+        margin: 0 0 32px;
+        text-align: center;
+      }
+      
+      .meta-row { 
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 24px; 
+        margin-bottom: 40px;
+        text-align: center;
+      }
+      .meta-col h3 { 
+        margin: 0 0 8px; 
+        font-family: "Space Grotesk", sans-serif; 
+        font-weight: 700; 
+        font-size: 16px;
+        letter-spacing: -0.16px;
+        line-height: 1.2;
+      }
+      .meta-col p { 
+        margin: 0; 
+        font-family: "Inter", sans-serif; 
+        font-weight: 400; 
+        font-size: 16px;
+        letter-spacing: -0.16px;
+        line-height: 1.2;
+        white-space: pre-line;
+      }
+      
+      .body-text { 
+        font-size: 16px; 
+        line-height: 1.8; 
+        font-weight: 400;
+        margin: 0 0 32px;
+      }
+      
+      .insight-cards { 
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 24px; 
+        margin-top: 32px;
+      }
+      .insight-card { 
+        background: #f1f4f6; 
+        border-radius: 12px; 
+        padding: 24px; 
+        text-align: center; 
+      }
+      .insight-card h3 { 
+        margin: 0 0 12px; 
+        font-family: "Pretendard", sans-serif;
+        font-size: 20px; 
+        font-weight: 700; 
+        letter-spacing: -0.4px;
+        line-height: 1.4;
+      }
+      .insight-card p { 
+        margin: 0; 
+        font-size: 16px; 
+        line-height: 1.8;
+      }
+
+      .problem-boxes { 
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 16px; 
+        margin: 8px 0 16px;
+      }
+      .problem-box { 
+        background: #f1f4f6; 
+        border-radius: 12px; 
+        padding: 18px 16px; 
+        text-align: center; 
+      }
+      .problem-box p { 
+        margin: 0; 
+        font-size: 16px; 
+        font-weight: 400; 
+        line-height: 1.8;
+      }
+      .problem-box .arrow { 
+        margin-top: 10px; 
+        color: #97a1ab; 
+        font-size: 24px;
+        font-weight: 400;
+      }
+
+      .solution-cards { 
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 24px; 
+        margin-top: 16px;
+      }
+      .solution-card { 
+        background: #e0f6ff; 
+        border-radius: 12px; 
+        padding: 24px; 
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .solution-icon { 
+        width: 100px; 
+        height: 100px; 
+        border-radius: 70px; 
+        background: #fff; 
+        margin-bottom: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .solution-icon img { 
+        max-width: 80%; 
+        max-height: 80%; 
+        object-fit: contain; 
+      }
+      .solution-card h3 { 
+        margin: 0; 
+        font-size: 20px; 
+        font-weight: 700;
+        line-height: 1.8;
+      }
+
+      @media (max-width: 900px) {
+        .meta-row, .insight-cards, .problem-boxes, .solution-cards { grid-template-columns: 1fr; }
+        .lead { font-size: 40px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="../index.html">Product designer. Jihye Ha</a>
+        <nav class="nav">
+          <a href="../index.html#works">Work</a>
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#resume">Résumé</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main container">
+      <section class="section">
+        <img class="brand-logo" src="../assets/img/coupang-eats-logo.svg" alt="Coupang Eats">
+        <h1 class="lead">Coupon Discovery & Usability Improvement</h1>
+        
+        <div class="meta-row">
+          <div class="meta-col">
+            <h3>Role</h3>
+            <p>Product designer</p>
+          </div>
+          <div class="meta-col">
+            <h3>Team</h3>
+            <p>1 PM
+1 Product designer
+2 Front Engineers(AOS/iOS)
+2 BE engineers
+QA
+UX Writer</p>
+          </div>
+          <div class="meta-col">
+            <h3>Timeline</h3>
+            <p>2022 Q3</p>
+          </div>
+        </div>
+
+        <div class="project-main" style="margin: 40px 0;">
+          <img src="../assets/img/project2-main.jpg" alt="Project main visual" style="width: 100%; border-radius: 12px;">
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Background</h2>
+        <p class="body-text">쿠팡이츠에서는 여러 종류의 할인 쿠폰을 도입해 운영해왔으나, 쿠폰 다운로드율(48%)과 실제 사용률(7%) 모두 기대에 미치지 못했다.  고객들은 쿠폰의 존재 자체는 인지하고 있었지만, "이 쿠폰이 내 주문에 실제로 적용되는지", "어떤 조건에서 사용할 수 있는지"와 같은 부분을 분명하게 확인하기 어려웠다.  이러한 불편은 쿠폰 관련 정보 제공 방식이 명확하지 않고, 실제 사용 과정에서의 경험과 안내가 일치하지 않았기 때문에 발생한 것으로 분석된다.</p>
+      </section>
+
+      <section class="section">
+        <h2>Insights</h2>
+        <p class="body-text">고객은 쿠폰의 존재를 인지하고 있었으나, 구체적인 조건과 적용 방법이 명확하지 않아 신뢰를 얻지 못했다.  이로 인해 주문을 최종적으로 진행하지 않은 것으로 판단된다.</p>
+        
+        <div class="insight-cards">
+          <div class="insight-card">
+            <h3>쿠폰 정보 제공의 부족</h3>
+            <p>고객이 쿠폰의 존재를 알고 있음에도 불구하고, 금액 외에 사용 조건, 적용 가능 여부, 만료일 등의 주요 정보가 충분히 안내되지 않고 있다.</p>
+          </div>
+          <div class="insight-card">
+            <h3>쿠폰 적용 과정의 혼란</h3>
+            <p>다운로드한 쿠폰이 장바구니 단계에서 자동으로 적용되지 않아, 고객 입장에서는 "분명히 쿠폰을 받았는데 왜 사용할 수 없지?"라는 의문과 불신이 생긴다.</p>
+          </div>
+          <div class="insight-card">
+            <h3>신뢰 저하에 따른 이탈</h3>
+            <p>이러한 불확실성으로 인해, 고객은 쿠폰을 보유하고도 주문을 망설이거나 결제 단계에서 최종적으로 이탈하는 사례가 발생하고 있다.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Problem Definition</h2>
+        <p class="body-text">고객은 쿠폰의 존재를 알고 있지만, 사용 조건과 적용 여부를 명확히 이해하지 못한다. 이로 인해 쿠폰 전반에 대한 신뢰도가 떨어지며, 결과적으로 사용률과 전환율이 낮아지는 문제가 발생한다.</p>
+      </section>
+
+      <section class="section">
+        <h2>Hypothesis</h2>
+        <p class="body-text">고객이 쿠폰의 조건과 적용 상태를 직관적으로 이해할 수 있다면, 쿠폰 사용에 대한 신뢰가 회복되고, 다운로드율과 실제 사용률 모두 상승할 것이다.</p>
+      </section>
+
+      <section class="section">
+        <h2>Solution Direction</h2>
+        <p class="body-text">쿠폰 정보를 한눈에 이해하고 즉시 적용 여부를 확인할 수 있게 하여, 고객이 '할인이 보장된 상태'임을 확신하도록 만들었다.</p>
+        
+        <div class="problem-boxes">
+          <div class="problem-box">
+            <p>쿠폰 금액만 노출, 조건·적용여부·만료일 불명확</p>
+            <div class="arrow">↓</div>
+          </div>
+          <div class="problem-box">
+            <p>다운로드 후 장바구니에서 자동 적용되지 않음</p>
+            <div class="arrow">↓</div>
+          </div>
+          <div class="problem-box">
+            <p>'쿠폰이 적용된 상태' 확인이 어려움</p>
+            <div class="arrow">↓</div>
+          </div>
+        </div>
+
+        <div class="solution-cards">
+          <div class="solution-card">
+            <div class="solution-icon">
+              <img src="../assets/img/solution-1.png" alt="Solution visual 1">
+            </div>
+            <h3>쿠폰의 핵심 정보(조건·적용대상·만료일)를 카드형 구조로 통합 표시</h3>
+          </div>
+          <div class="solution-card">
+            <div class="solution-icon">
+              <img src="../assets/img/solution-2.png" alt="Solution visual 2">
+            </div>
+            <h3>자동 다운로드 및 적용 가능 여부 즉시 안내</h3>
+          </div>
+          <div class="solution-card">
+            <div class="solution-icon">
+              <img src="../assets/img/solution-3.png" alt="Solution visual 3">
+            </div>
+            <h3>할인 적용 완료 상태를 시각적으로 명확히 표시</h3>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Reflection</h2>
+        <p class="body-text">1. 이번 프로젝트의 핵심은 단순히 쿠폰을 보여주는 데 그치는 것이 아니라, 고객이 쿠폰의 혜택을 제대로 이해할 수 있도록 만드는 데 있었다. 2. 고객에게 충분한 정보를 제공해야만 실제로 혜택을 신뢰하게 된다는 점을 이번 과정을 통해 배웠다. 3. 명확한 정보 구조가 신뢰 형성의 첫걸음임을 다시 한번 확인할 수 있었던 프로젝트였다.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-note">If this project summary caught your interest,  let's connect.</p>
+        <div class="footer-right">
+          <p class="footer-links">
+            <a href="#" rel="noopener">LinkedIn</a>
+            <a href="#" rel="noopener">Instagram</a>
+            <a href="mailto:haji@example.com">Mail</a>
+          </p>
+          <p class="credit">Design and vibe coded by Jihye ha, 2025</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
