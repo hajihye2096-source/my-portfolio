@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Open IoT platform that connects all smart devices</title>
+    <base href="/my-portfolio/">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+      .site-main.container { width: min(1280px, 92%); }
+      
+      .section { padding: 32px 0; }
+      .section h2 { 
+        margin: 0 0 32px; 
+        font-size: 32px; 
+        font-weight: 700; 
+        letter-spacing: -0.32px;
+        line-height: 1.2;
+      }
+      
+      .brand-logo { height: 28px; width: auto; margin-bottom: 24px; }
+      .lead { 
+        font-size: 56px; 
+        line-height: 1.2; 
+        font-weight: 700; 
+        letter-spacing: -0.56px; 
+        margin: 0 0 32px;
+        text-align: center;
+      }
+      
+      .meta-row { 
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 24px; 
+        margin-bottom: 40px;
+        text-align: center;
+      }
+      .meta-col h3 { 
+        margin: 0 0 8px; 
+        font-family: "Space Grotesk", sans-serif; 
+        font-weight: 700; 
+        font-size: 16px;
+        letter-spacing: -0.16px;
+        line-height: 1.2;
+      }
+      .meta-col p { 
+        margin: 0; 
+        font-family: "Inter", sans-serif; 
+        font-weight: 400; 
+        font-size: 16px;
+        letter-spacing: -0.16px;
+        line-height: 1.2;
+        white-space: pre-line;
+      }
+      
+      .body-text { 
+        font-size: 16px; 
+        line-height: 1.8; 
+        font-weight: 400;
+        margin: 0 0 32px;
+      }
+      
+      .goal-row { 
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 24px; 
+      }
+      .goal-card { 
+        background: #f1f4f6; 
+        border-radius: 12px; 
+        padding: 24px; 
+        text-align: center; 
+      }
+      .goal-card h3 { 
+        margin: 0 0 12px; 
+        font-family: "Pretendard", sans-serif;
+        font-size: 20px; 
+        font-weight: 700; 
+        letter-spacing: -0.4px;
+        line-height: 1.4;
+      }
+      .goal-card p { 
+        margin: 0; 
+        font-size: 16px; 
+        line-height: 1.8;
+      }
+
+      @media (max-width: 900px) {
+        .meta-row, .goal-row { grid-template-columns: 1fr; }
+        .lead { font-size: 40px; }
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="smudge-canvas" aria-hidden="true"></canvas>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">Product designer. Jihye Ha</a>
+        <nav class="nav">
+          <a href="index.html#works">Work</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#resume">Résumé</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main container">
+      <section class="section">
+        <img class="brand-logo" src="assets/img/skelter-logo.svg" alt="Skelter Labs">
+        <h1 class="lead">Open IoT platform that connects all smart devices</h1>
+        
+        <div class="meta-row">
+          <div class="meta-col">
+            <h3>Role</h3>
+            <p>Product designer</p>
+          </div>
+          <div class="meta-col">
+            <h3>Team</h3>
+            <p>1 PM
+1 Product designer
+2 Front Engineers
+1 BE engineers
+QA</p>
+          </div>
+          <div class="meta-col">
+            <h3>Timeline</h3>
+            <p>2023 Q4</p>
+          </div>
+        </div>
+
+        <div class="project-main" style="margin: 40px 0;">
+          <img src="assets/img/project03-thumb.jpg" alt="Project main visual" style="width: 100%; border-radius: 12px;">
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Background</h2>
+        <p class="body-text">스켈터랩스는 모든 스마트 기기를 연결하는 오픈 IoT 플랫폼을 개발하고 있습니다. 사용자들이 다양한 브랜드의 스마트 기기들을 하나의 앱에서 통합 관리할 수 있도록 하는 것이 목표입니다.</p>
+      </section>
+
+      <section class="section">
+        <h2>Goal</h2>
+        <div class="goal-row">
+          <div class="goal-card">
+            <h3>User Goal</h3>
+            <p>다양한 브랜드의 스마트 기기를 하나의 플랫폼에서 통합 관리할 수 있을 것</p>
+          </div>
+          <div class="goal-card">
+            <h3>Business Goal</h3>
+            <p>IoT 생태계의 중심이 되는 플랫폼으로 성장하고, 사용자 만족도를 높일 것</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Reflection</h2>
+        <p class="body-text">IoT 플랫폼의 복잡성을 단순화하여 사용자에게 직관적인 경험을 제공하는 것이 핵심이었습니다. 다양한 기기와의 호환성을 유지하면서도 사용자 친화적인 인터페이스를 구현하는 것이 가장 큰 도전이었습니다.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-left">
+            <p class="footer-text">If this project summary caught your interest,<br>let's connect.</p>
+          </div>
+          <div class="footer-center">
+            <p class="footer-links">
+              <a href="#" rel="noopener">LinkedIn</a>
+              <a href="#" rel="noopener">Instagram</a>
+              <a href="mailto:haji@example.com">Mail</a>
+            </p>
+          </div>
+          <div class="footer-right">
+            <p class="credit">Design and vibe coded by Jihye ha, 2025</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./assets/js/smudge.js"></script>
+  </body>
+</html>
