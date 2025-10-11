@@ -15,7 +15,7 @@
         margin: 0 0 32px; 
       }
       
-      .brand-logo { height: 28px; width: auto; margin-bottom: 24px; }
+      .brand-logo { height: 28px; width: auto; margin: 0 auto 24px; display: block; }
       .lead { 
         margin: 0 0 32px;
         text-align: center;
@@ -31,23 +31,34 @@
       .meta-col h3 { 
         margin: 0 0 8px; 
         font-family: "Space Grotesk", sans-serif; 
-        font-weight: 700; 
-        font-size: 16px;
-        letter-spacing: -0.16px;
-        line-height: 1.2;
       }
       .meta-col p { 
         margin: 0; 
         font-family: "Inter", sans-serif; 
-        font-weight: 400; 
-        font-size: 16px;
-        letter-spacing: -0.16px;
-        line-height: 1.2;
         white-space: pre-line;
       }
       
       .body-text { 
         margin: 0 0 32px;
+      }
+      
+      .goal-row { 
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 24px; 
+      }
+      .goal-card { 
+        background: #f8f9fa; 
+        border-radius: 12px; 
+        padding: 24px; 
+        text-align: center;
+      }
+      .goal-card h3 { 
+        margin: 0 0 12px; 
+        font-family: "Pretendard", sans-serif;
+      }
+      .goal-card p { 
+        margin: 0; 
       }
       
       .insight-cards { 
@@ -168,7 +179,7 @@
       }
 
       @media (max-width: 900px) {
-        .meta-row, .insight-cards, .solution-flow { grid-template-columns: 1fr; }
+        .meta-row, .goal-row, .insight-cards, .solution-flow { grid-template-columns: 1fr; }
         .lead { font-size: 40px; }
       }
     </style>
@@ -238,6 +249,20 @@ UX Writer</p>
       <section class="section">
         <h2 class="text-h2">Background</h2>
         <p class="body-text text-body">Coupang Eats had introduced various discount coupons, but both download rates (48%) and actual usage rates (7%) fell short of expectations. While customers were aware of the coupons' existence, they had difficulty clearly understanding whether "this coupon would actually apply to my order" or "under what conditions can I use it." This confusion was due to unclear information delivery about coupons and a mismatch between the actual usage experience and the guidance provided.</p>
+      </section>
+
+      <section class="section">
+        <h2 class="text-h2">Goal</h2>
+        <div class="goal-row">
+          <div class="goal-card">
+            <h3 class="text-h4">User Goal</h3>
+            <p class="text-body">Users should clearly understand coupon conditions and application status to build trust in coupon usage</p>
+          </div>
+          <div class="goal-card">
+            <h3 class="text-h4">Business Goal</h3>
+            <p class="text-body">Increase coupon download rates and actual usage rates by improving user trust and understanding</p>
+          </div>
+        </div>
       </section>
 
       <section class="section">
@@ -348,20 +373,12 @@ UX Writer</p>
     <footer class="site-footer">
       <div class="container">
         <div class="footer-inner">
-          <div class="footer-col footer-col-1">
+          <div class="footer-col footer-col-1-2">
             <p class="footer-text">If this project summary caught your interest,<br>let's connect.</p>
             <p class="footer-links">
-              <a href="#" rel="noopener">LinkedIn</a>
-              <a href="#" rel="noopener">Instagram</a>
-              <a href="mailto:haji@example.com">Mail</a>
-            </p>
-          </div>
-          <div class="footer-col footer-col-2">
-            <p class="footer-text">I'd love to share more about my journey<br>feel free to reach out anytime.</p>
-            <p class="footer-links">
-              <a href="#" rel="noopener">LinkedIn</a>
-              <a href="#" rel="noopener">Instagram</a>
-              <a href="mailto:haji@example.com">Mail</a>
+              <a href="https://www.linkedin.com/in/hacci/" rel="noopener">LinkedIn</a>
+              <a href="https://www.instagram.com/hajihye00/" rel="noopener">Instagram</a>
+              <a href="mailto:hajihye2096@gmail.com">Mail</a>
             </p>
           </div>
           <div class="footer-col footer-col-3">
