@@ -14,18 +14,11 @@
       .hero-home { padding: 28px 0 40px; }
       .hero-home h1 { 
         margin: 0 0 16px; 
-        font-size: 64px; 
-        font-weight: 700;
-        line-height: 1.276; 
-        letter-spacing: 0;
         color: #000;
       }
       .hero-home p { 
         margin: 0 0 4px; 
         color: #000; 
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 1.276;
       }
 
       .projects-home { 
@@ -68,9 +61,6 @@
          }
          .project-title {
            margin: 0;
-           font-size: 24px;
-           font-weight: 700;
-           line-height: 1.2;
            color: black;
          }
       
@@ -96,9 +86,6 @@
 
       @media (max-width: 900px) {
         .projects-home { grid-template-columns: 1fr; }
-        .hero-home h1 { font-size: 48px; }
-        .hero-home p { font-size: 20px; }
-        .project-title { font-size: 20px; }
         .project-overlay { padding: 16px; }
       }
     </style>
@@ -118,9 +105,9 @@
 
     <main class="site-main container">
       <section class="hero-home">
-        <h1>Currently a product designer at<br>Coupang Eats</h1>
-        <p>I build cultures that empower people to move forward.</p>
-        <p>I measure success by the positive feeling I bring to our teams and the people who use what we build.</p>
+        <h1 class="text-display">Currently a product designer at<br>Coupang Eats</h1>
+        <p class="text-h3">I build cultures that empower people to move forward.</p>
+        <p class="text-h3">I measure success by the positive feeling I bring to our teams and the people who use what we build.</p>
       </section>
 
       <section class="projects-home">
@@ -130,7 +117,7 @@
               <img src="assets/img/project01-thumb.jpg" alt="Multi-order deliveries">
              <div class="project-overlay">
                <img class="project-brand" src="assets/img/coupang-eats-logo.svg" alt="Coupang Eats">
-               <h2 class="project-title">Improving communication for multi-order deliveries</h2>
+               <h2 class="project-title text-h3">Improving communication for multi-order deliveries</h2>
              </div>
               <div class="project-hover-overlay"></div>
             </div>
@@ -143,7 +130,7 @@
               <img src="assets/img/project02-thumb.jpg" alt="Coupon Discovery">
               <div class="project-overlay">
                 <img class="project-brand" src="assets/img/coupang-eats-logo.svg" alt="Coupang Eats">
-                <h2 class="project-title">Coupon Discovery & Usability Improvement</h2>
+                <h2 class="project-title text-h3">Coupon Discovery & Usability Improvement</h2>
               </div>
               <div class="project-hover-overlay"></div>
             </div>
@@ -156,7 +143,7 @@
               <img src="assets/img/project03-thumb.jpg" alt="IoT Platform">
               <div class="project-overlay">
                 <img class="project-brand" src="assets/img/skelter-logo.svg" alt="Skelter Labs">
-                <h2 class="project-title">Open IoT platform that connects all smart devices</h2>
+                <h2 class="project-title text-h3">Open IoT platform that connects all smart devices</h2>
               </div>
               <div class="project-hover-overlay"></div>
             </div>

@@ -13,18 +13,10 @@
       .section { padding: 32px 0; }
       .section h2 { 
         margin: 0 0 32px; 
-        font-size: 32px; 
-        font-weight: 700; 
-        letter-spacing: -0.32px;
-        line-height: 1.2;
       }
       
       .brand-logo { height: 28px; width: auto; margin: 0 auto 24px; display: block; }
       .lead { 
-        font-size: 56px; 
-        line-height: 1.2; 
-        font-weight: 700; 
-        letter-spacing: -0.56px; 
         margin: 0 0 32px;
         text-align: center;
       }
@@ -39,25 +31,14 @@
       .meta-col h3 { 
         margin: 0 0 8px; 
         font-family: "Space Grotesk", sans-serif; 
-        font-weight: 700; 
-        font-size: 16px;
-        letter-spacing: -0.16px;
-        line-height: 1.2;
       }
       .meta-col p { 
         margin: 0; 
         font-family: "Inter", sans-serif; 
-        font-weight: 400; 
-        font-size: 16px;
-        letter-spacing: -0.16px;
-        line-height: 1.2;
         white-space: pre-line;
       }
       
       .body-text { 
-        font-size: 16px; 
-        line-height: 1.8; 
-        font-weight: 400;
         margin: 0 0 32px;
       }
       
@@ -75,33 +56,20 @@
       .goal-card h3 { 
         margin: 0 0 12px; 
         font-family: "Pretendard", sans-serif;
-        font-size: 20px; 
-        font-weight: 700; 
-        letter-spacing: -0.4px;
-        line-height: 1.4;
       }
       .goal-card p { 
         margin: 0; 
-        font-size: 16px; 
-        line-height: 1.8;
       }
 
       .problem-list { margin: 32px 0; }
       .problem-item { margin-bottom: 32px; }
       .problem-item .number { 
-        font-size: 24px; 
-        font-weight: 700; 
         margin: 0 0 8px;
-        line-height: 1.276;
       }
       .problem-item .text { 
-        font-size: 16px; 
-        line-height: 1.8; 
         margin: 0;
       }
       .problem-item .solution { 
-        font-size: 16px; 
-        line-height: 1.8; 
         margin: 8px 0 0;
         color: #00a7f6;
         font-weight: 700;
@@ -121,14 +89,9 @@
       }
       .solution-card h3 { 
         margin: 0 0 12px; 
-        font-size: 20px; 
-        font-weight: 700;
-        line-height: 1.8;
       }
       .solution-card p { 
         margin: 0; 
-        font-size: 20px; 
-        line-height: 1.8;
       }
 
       .test-box { 
@@ -138,15 +101,10 @@
         margin-top: 32px;
       }
       .test-box .question { 
-        font-size: 16px; 
-        font-weight: 700; 
-        line-height: 1.8;
         margin: 0 0 12px;
         text-align: center;
       }
       .test-box .method { 
-        font-size: 16px; 
-        line-height: 1.8;
         margin: 0 0 12px;
         text-align: center;
       }
@@ -157,22 +115,16 @@
         margin-top: 12px;
       }
       .test-result .label { 
-        font-size: 16px; 
-        line-height: 1.8;
         margin: 0 0 8px;
         text-align: center;
       }
       .test-result .result { 
-        font-size: 20px; 
-        font-weight: 700;
-        line-height: 1.8;
         margin: 0;
         text-align: center;
       }
 
       @media (max-width: 900px) {
         .meta-row, .goal-row, .solution-cards { grid-template-columns: 1fr; }
-        .lead { font-size: 40px; }
       }
     </style>
   </head>
@@ -192,7 +144,7 @@
     <main class="site-main container">
       <section class="section">
         <img class="brand-logo" src="assets/img/coupang-eats-logo.svg" alt="Coupang Eats">
-        <h1 class="lead">Improving communication for multi-order deliveries</h1>
+        <h1 class="lead text-h1">Improving communication for multi-order deliveries</h1>
         
         <div class="project-main" style="margin: 40px 0;">
           <img src="assets/img/project1-main.jpg" alt="Project main visual" style="width: 100%; border-radius: 12px;">
@@ -200,12 +152,12 @@
         
         <div class="meta-row">
           <div class="meta-col">
-            <h3>Role</h3>
-            <p>Product designer</p>
+            <h3 class="text-h4">Role</h3>
+            <p class="text-body">Product designer</p>
           </div>
           <div class="meta-col">
-            <h3>Team</h3>
-            <p>1 PM
+            <h3 class="text-h4">Team</h3>
+            <p class="text-body">1 PM
 1 Product designer
 2 Front Engineers(AOS/iOS)
 1 BE engineers
@@ -213,82 +165,82 @@ QA
 UX Writer</p>
           </div>
           <div class="meta-col">
-            <h3>Timeline</h3>
-            <p>2024 Q3</p>
+            <h3 class="text-h4">Timeline</h3>
+            <p class="text-body">2024 Q3</p>
           </div>
         </div>
       </section>
 
       <section class="section">
-        <h2>Background</h2>
-        <p class="body-text">Coupang Eats introduced a new system to deliver 3 or more orders at once, aiming to increase revenue per order by processing more deliveries simultaneously. However, the existing delivery status screen could only display up to 2 orders, failing to properly accommodate the new delivery approach. This left customers struggling to get a clear overview when multiple deliveries were happening at the same time. We determined that improving the delivery status page to provide clearer real-time updates for multiple orders was essential to solve this problem.</p>
+        <h2 class="text-h2">Background</h2>
+        <p class="body-text text-body">Coupang Eats introduced a new system to deliver 3 or more orders at once, aiming to increase revenue per order by processing more deliveries simultaneously. However, the existing delivery status screen could only display up to 2 orders, failing to properly accommodate the new delivery approach. This left customers struggling to get a clear overview when multiple deliveries were happening at the same time. We determined that improving the delivery status page to provide clearer real-time updates for multiple orders was essential to solve this problem.</p>
       </section>
 
       <section class="section">
-        <h2>Goal</h2>
+        <h2 class="text-h2">Goal</h2>
         <div class="goal-row">
           <div class="goal-card">
-            <h3>User Goal</h3>
-            <p>Users should clearly understand multiple delivery statuses and predict arrival order</p>
+            <h3 class="text-h4">User Goal</h3>
+            <p class="text-body">Users should clearly understand multiple delivery statuses and predict arrival order</p>
           </div>
           <div class="goal-card">
-            <h3>Business Goal</h3>
-            <p>Reduce delivery-related customer service inquiries and improve service reliability and satisfaction</p>
+            <h3 class="text-h4">Business Goal</h3>
+            <p class="text-body">Reduce delivery-related customer service inquiries and improve service reliability and satisfaction</p>
           </div>
         </div>
       </section>
 
       <section class="section">
-        <h2>Problem & Hypothesis</h2>
+        <h2 class="text-h2">Problem & Hypothesis</h2>
         <div class="problem-list">
           <div class="problem-item">
-            <p class="number">01 </p>
-            <p class="text">Multiple 'nearby store, nearby delivery' tags overlapped on one screen, confusing users about delivery status.</p>
-            <p class="solution">→Simplifying delivery status to focus on order will help users understand the current situation more easily.</p>
+            <p class="number text-h3">01 </p>
+            <p class="text text-body">Multiple 'nearby store, nearby delivery' tags overlapped on one screen, confusing users about delivery status.</p>
+            <p class="solution text-body">→Simplifying delivery status to focus on order will help users understand the current situation more easily.</p>
           </div>
           <div class="problem-item">
-            <p class="number">02</p>
-            <p class="text">Users couldn't tell which order would arrive first, making it hard to understand delivery stages.</p>
-            <p class="solution">→Visualizing each order's progress in stages with appropriate guidance will reduce customer cognitive load.</p>
+            <p class="number text-h3">02</p>
+            <p class="text text-body">Users couldn't tell which order would arrive first, making it hard to understand delivery stages.</p>
+            <p class="solution text-body">→Visualizing each order's progress in stages with appropriate guidance will reduce customer cognitive load.</p>
           </div>
         </div>
       </section>
 
       <section class="section">
-        <h2>Solution Direction</h2>
-        <p class="body-text">We simplified the complex delivery information by organizing it according to order and context. This ensures users have a clear and consistent experience without confusion, even when dealing with multiple orders.</p>
+        <h2 class="text-h2">Solution Direction</h2>
+        <p class="body-text text-body">We simplified the complex delivery information by organizing it according to order and context. This ensures users have a clear and consistent experience without confusion, even when dealing with multiple orders.</p>
         
         <div class="solution-cards">
           <div class="solution-card">
-            <h3>Order-based delivery structure</h3>
-            <p>Reorganized the delivery process around sequence so users can understand multiple order progress at a glance.</p>
+            <h3 class="text-h4">Order-based delivery structure</h3>
+            <p class="text-body">Reorganized the delivery process around sequence so users can understand multiple order progress at a glance.</p>
           </div>
           <div class="solution-card">
-            <h3>Simplified status representation</h3>
-            <p>Reduced unnecessary information and visual elements to make core stages clearly recognizable.</p>
+            <h3 class="text-h4">Simplified status representation</h3>
+            <p class="text-body">Reduced unnecessary information and visual elements to make core stages clearly recognizable.</p>
           </div>
           <div class="solution-card">
-            <h3>User-friendly messaging</h3>
-            <p>Provided guidance through natural and personalized language to create familiar and trustworthy experiences even in multi-delivery situations.</p>
+            <h3 class="text-h4">User-friendly messaging</h3>
+            <p class="text-body">Provided guidance through natural and personalized language to create familiar and trustworthy experiences even in multi-delivery situations.</p>
           </div>
         </div>
       </section>
 
       <section class="section">
-        <h2>User Test</h2>
+        <h2 class="text-h2">User Test</h2>
         <div class="test-box">
-          <p class="question">Can users clearly understand delivery status and predict arrival order in a multi-delivery environment?</p>
-          <p class="method">Figma interactive prototype testing, interviews and scenario-based task execution (explore–understand–predict)</p>
+          <p class="question text-body">Can users clearly understand delivery status and predict arrival order in a multi-delivery environment?</p>
+          <p class="method text-body">Figma interactive prototype testing, interviews and scenario-based task execution (explore–understand–predict)</p>
           <div class="test-result">
-            <p class="label">Result</p>
-            <p class="result">All 4 out of 4 participants understood both their own and other deliveries within the scenario</p>
+            <p class="label text-body">Result</p>
+            <p class="result text-h4">All 4 out of 4 participants understood both their own and other deliveries within the scenario</p>
           </div>
         </div>
       </section>
 
       <section class="section">
-        <h2>Reflection</h2>
-        <p class="body-text">We simplified information around order and context so users wouldn't get confused when multiple deliveries were happening simultaneously. This allowed us to provide clear and consistent delivery experiences even in multi-order situations.</p>
+        <h2 class="text-h2">Reflection</h2>
+        <p class="body-text text-body">We simplified information around order and context so users wouldn't get confused when multiple deliveries were happening simultaneously. This allowed us to provide clear and consistent delivery experiences even in multi-order situations.</p>
       </section>
     </main>
 
