@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -221,7 +221,7 @@ UX Writer</p>
 
       <section class="section">
         <h2>Background</h2>
-        <p class="body-text">쿠팡이츠는 주문당 수익을 높이기 위해 한 번에 더 많은 주문을 처리할 수 있도록, 3건 이상의 주문을 한 번에 배달하는 새로운 시스템을 도입했다.   하지만 기존 배달 현황 화면은 최대 2건까지만 표시할 수 있어, 변경된 배달 방식에 적절하게 대응하지 못하고 있었다. 이로 인해 고객들은 여러 건의 배달이 동시에 이루어지는 상황을 한눈에 확인하기 어렵다는 불편을 겪고 있었다. 이 같은 문제를 해결하기 위해서는, 여러 주문의 배달 현황을 실시간으로 보다 명확하게 안내하는 페이지로 개선하는 것이 반드시 필요하다고 판단했다.</p>
+        <p class="body-text">Coupang Eats introduced a new system to deliver 3 or more orders at once, aiming to increase revenue per order by processing more deliveries simultaneously. However, the existing delivery status screen could only display up to 2 orders, failing to properly accommodate the new delivery approach. This left customers struggling to get a clear overview when multiple deliveries were happening at the same time. We determined that improving the delivery status page to provide clearer real-time updates for multiple orders was essential to solve this problem.</p>
       </section>
 
       <section class="section">
@@ -229,11 +229,11 @@ UX Writer</p>
         <div class="goal-row">
           <div class="goal-card">
             <h3>User Goal</h3>
-            <p>여러 건의 배달 상태를 명확하게 이해하고, 도착 순서를 예측할 수 있을 것</p>
+            <p>Users should clearly understand multiple delivery statuses and predict arrival order</p>
           </div>
           <div class="goal-card">
             <h3>Business Goal</h3>
-            <p>배달 관련 CS 문의율을 낮추고, 서비스 신뢰도 및 만족도를 높일 것</p>
+            <p>Reduce delivery-related customer service inquiries and improve service reliability and satisfaction</p>
           </div>
         </div>
       </section>
@@ -243,35 +243,33 @@ UX Writer</p>
         <div class="problem-list">
           <div class="problem-item">
             <p class="number">01 </p>
-            <p class="text">'근처매장, 근처배달' 배달 태그가 한 화면에 여러개겹쳐 보여 사용자가 배달 상황을 혼동했다.</p>
-            <p class="solution">→배달 상태를 순서 위주로 단순화하면, 사용자가 현재 상황을 더 쉽게 파악할 수 있을 것이다.'</p>
+            <p class="text">Multiple 'nearby store, nearby delivery' tags overlapped on one screen, confusing users about delivery status.</p>
+            <p class="solution">→Simplifying delivery status to focus on order will help users understand the current situation more easily.</p>
           </div>
           <div class="problem-item">
             <p class="number">02</p>
-            <p class="text">어떤 주문이 먼저 도착할지 알기 어려워 배달 단계 인지가 어려웠다.</p>
-            <p class="solution">→주문별 진행 상태를 단계별로 시각화하고, 그에 맞는 안내 문구를 제공하면 고객의 인지 부담이 감소할 것이다.</p>
+            <p class="text">Users couldn't tell which order would arrive first, making it hard to understand delivery stages.</p>
+            <p class="solution">→Visualizing each order's progress in stages with appropriate guidance will reduce customer cognitive load.</p>
           </div>
         </div>
       </section>
 
       <section class="section">
         <h2>Solution Direction</h2>
-        <p class="body-text">복잡했던 배달 정보를 순서와 맥락에 따라 정리해 단순화하였다. 
-이를 통해 사용자는 여러 주문 상황에서도 혼란 없이 명확하고 일관된 경험을 할 수 있도록 하였다.</p>
+        <p class="body-text">We simplified the complex delivery information by organizing it according to order and context. This ensures users have a clear and consistent experience without confusion, even when dealing with multiple orders.</p>
         
         <div class="solution-cards">
           <div class="solution-card">
-            <h3>배달 순서 기반 구조 정리</h3>
-            <p>배달 과정을 순서 중심으로 재구성해 사용자가 여러 주문의 진행 상황을 한눈에 이해할 수 있도록 했다.</p>
+            <h3>Order-based delivery structure</h3>
+            <p>Reorganized the delivery process around sequence so users can understand multiple order progress at a glance.</p>
           </div>
           <div class="solution-card">
-            <h3>상태 표현 단순화</h3>
-            <p>불필요한 정보와 시각 요소를 줄여, 핵심 단계만 명확하게 인식되도록 개선했다.
-</p>
+            <h3>Simplified status representation</h3>
+            <p>Reduced unnecessary information and visual elements to make core stages clearly recognizable.</p>
           </div>
           <div class="solution-card">
-            <h3>사용자 친화적 문구 도입</h3>
-            <p>자연스럽고 개인화된 문장으로 안내해 다중배달 상황에서도 익숙하고 신뢰감 있는 경험을 만들었다.</p>
+            <h3>User-friendly messaging</h3>
+            <p>Provided guidance through natural and personalized language to create familiar and trustworthy experiences even in multi-delivery situations.</p>
           </div>
         </div>
       </section>
@@ -279,18 +277,18 @@ UX Writer</p>
       <section class="section">
         <h2>User Test</h2>
         <div class="test-box">
-          <p class="question">다중배달 환경에서 사용자가 배달 상태를 명확히 이해하고, 도착 순서를 예상할 수 있는가?</p>
-          <p class="method">Figma 인터랙티브 프로토타입 기반 테스트, 인터뷰 및 시나리오 기반 태스크 수행 (탐색–이해–예상)</p>
+          <p class="question">Can users clearly understand delivery status and predict arrival order in a multi-delivery environment?</p>
+          <p class="method">Figma interactive prototype testing, interviews and scenario-based task execution (explore–understand–predict)</p>
           <div class="test-result">
             <p class="label">Result</p>
-            <p class="result">4명 중 4명 모두 시나리오 내에서 다른 배달과 본인 배달의 상태를 이해함</p>
+            <p class="result">All 4 out of 4 participants understood both their own and other deliveries within the scenario</p>
           </div>
         </div>
       </section>
 
       <section class="section">
         <h2>Reflection</h2>
-        <p class="body-text">여러 배달이 동시에 진행될 때 사용자가 혼란스럽지 않도록, 정보를 순서와 맥락 중심으로 단순화했다. 이를 통해 여러 주문 상황에서도 명확하고 일관된 배달 경험을 제공할 수 있었다.</p>
+        <p class="body-text">We simplified information around order and context so users wouldn't get confused when multiple deliveries were happening simultaneously. This allowed us to provide clear and consistent delivery experiences even in multi-order situations.</p>
       </section>
     </main>
 
