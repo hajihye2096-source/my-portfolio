@@ -65,40 +65,40 @@ body {
 /* Mobile Typography */
 @media (max-width: 900px) {
   .text-display {
-    font-size: 48px;
-    letter-spacing: -0.48px;
+    font-size: 52px;
+    letter-spacing: -0.52px;
   }
   
   .text-h1 {
-    font-size: 40px;
-    letter-spacing: -0.40px;
+    font-size: 44px;
+    letter-spacing: -0.44px;
   }
   
   .text-h2 {
-    font-size: 24px;
-    letter-spacing: -0.24px;
+    font-size: 28px;
+    letter-spacing: -0.28px;
   }
   
   .text-h3 {
+    font-size: 22px;
+    letter-spacing: -0.22px;
+  }
+  
+  .text-h4 {
     font-size: 20px;
     letter-spacing: -0.20px;
   }
   
-  .text-h4 {
-    font-size: 18px;
-    letter-spacing: -0.18px;
-  }
-  
   .text-body-large {
-    font-size: 16px;
+    font-size: 18px;
   }
   
   .text-body {
-    font-size: 14px;
+    font-size: 16px;
   }
   
   .text-small {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
