@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>404 - Page Not Found</title>
+    <base href="/my-portfolio/">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+      body {
+        background: #fff;
+        color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        font-family: "Space Grotesk", sans-serif;
+      }
+      
+      .error-container {
+        text-align: center;
+        max-width: 600px;
+        padding: 40px 20px;
+      }
+      
+      .error-code {
+        font-size: 120px;
+        font-weight: 700;
+        line-height: 1;
+        margin: 0 0 20px;
+        color: #000;
+      }
+      
+      .error-title {
+        font-size: 32px;
+        font-weight: 700;
+        margin: 0 0 16px;
+        color: #000;
+      }
+      
+      .error-description {
+        font-size: 18px;
+        line-height: 1.6;
+        margin: 0 0 32px;
+        color: #666;
+        font-family: "Inter", sans-serif;
+      }
+      
+      .back-button {
+        display: inline-block;
+        background: #000;
+        color: #fff;
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 16px;
+        transition: background 0.2s ease;
+      }
+      
+      .back-button:hover {
+        background: #333;
+      }
+      
+      @media (max-width: 600px) {
+        .error-code {
+          font-size: 80px;
+        }
+        
+        .error-title {
+          font-size: 24px;
+        }
+        
+        .error-description {
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="error-container">
+      <h1 class="error-code">404</h1>
+      <h2 class="error-title">Page Not Found</h2>
+      <p class="error-description">
+        Sorry, the page you're looking for doesn't exist or has been moved.
+      </p>
+      <a href="index.html" class="back-button">Go Back Home</a>
+    </div>
+  </body>
+</html>
