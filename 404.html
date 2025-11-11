@@ -6,67 +6,178 @@
     <title>404 - Page Not Found</title>
     <base href="/my-portfolio/">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles.css">
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
       body {
-        background: #fff;
-        color: #000;
+        background: #ffffff;
+        color: #000000;
+        font-family: "Space Grotesk", sans-serif;
+        min-height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
-        min-height: 100vh;
-        margin: 0;
-        font-family: "Space Grotesk", sans-serif;
-      }
-      
-      .error-container {
-        text-align: center;
-        max-width: 600px;
         padding: 40px 20px;
       }
       
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 48px;
+        max-width: 1280px;
+        width: 100%;
+      }
+      
+      .introduction {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        width: 100%;
+      }
+      
+      .image-container {
+        width: 360px;
+        height: 360px;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .image-404 {
+        position: absolute;
+        width: 120.54%;
+        height: 180.43%;
+        left: -10.27%;
+        top: -54.99%;
+        max-width: none;
+      }
+      
+      .text-container {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+        text-align: center;
+      }
+      
       .error-code {
-        font-size: 120px;
-        font-weight: 700;
-        line-height: 1;
-        margin: 0 0 20px;
-        color: #000;
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: normal;
       }
       
       .error-title {
-        font-size: 32px;
+        font-family: "Space Grotesk", sans-serif;
         font-weight: 700;
-        margin: 0 0 16px;
-        color: #000;
+        font-size: 48px;
+        line-height: normal;
       }
       
       .error-description {
-        font-size: 18px;
-        line-height: 1.6;
-        margin: 0 0 32px;
-        color: #666;
-        font-family: "Inter", sans-serif;
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: normal;
+        text-align: center;
+        margin-top: 16px;
       }
       
-      .back-button {
-        display: inline-block;
-        background: #000;
-        color: #fff;
-        padding: 12px 24px;
-        border-radius: 8px;
+      .button {
+        background: #e8e8e8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        height: 40px;
+        padding: 0 16px;
         text-decoration: none;
-        font-weight: 700;
-        font-size: 16px;
+        color: #000000;
         transition: background 0.2s ease;
       }
       
-      .back-button:hover {
-        background: #333;
+      .button:hover {
+        background: #d0d0d0;
       }
       
-      @media (max-width: 600px) {
-        .error-code {
-          font-size: 80px;
+      .button-text {
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: normal;
+        text-align: center;
+        white-space: pre;
+      }
+      
+      .social-links {
+        display: flex;
+        gap: 24px;
+        align-items: flex-start;
+        padding-top: 24px;
+        border-top: 1px solid transparent;
+      }
+      
+      .social-link {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+        text-decoration: none;
+        color: #000000;
+        transition: opacity 0.2s ease;
+      }
+      
+      .social-link:hover {
+        opacity: 0.7;
+      }
+      
+      .social-icon {
+        width: 28px;
+        height: 28px;
+      }
+      
+      .social-text {
+        font-family: "Inter", sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: normal;
+        text-decoration: underline;
+        text-underline-position: from-font;
+      }
+      
+      @media (max-width: 768px) {
+        .content {
+          gap: 32px;
+        }
+        
+        .image-container {
+          width: 280px;
+          height: 280px;
+        }
+        
+        .error-title {
+          font-size: 32px;
+        }
+        
+        .social-links {
+          flex-direction: column;
+          gap: 16px;
+          align-items: center;
+        }
+        
+        .social-text {
+          font-size: 20px;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .image-container {
+          width: 200px;
+          height: 200px;
         }
         
         .error-title {
@@ -74,19 +185,48 @@
         }
         
         .error-description {
-          font-size: 16px;
+          font-size: 14px;
         }
       }
     </style>
   </head>
   <body>
-    <div class="error-container">
-      <h1 class="error-code">404</h1>
-      <h2 class="error-title">Page Not Found</h2>
-      <p class="error-description">
-        Sorry, the page you're looking for doesn't exist or has been moved.
-      </p>
-      <a href="index.html" class="back-button">Go Back Home</a>
+    <div class="content">
+      <div class="introduction">
+        <div class="image-container">
+          <img class="image-404" src="assets/img/9f20e6af2406d2482bb4db645ee488720872f708.png" alt="404">
+        </div>
+        
+        <div class="text-container">
+          <p class="error-code">404</p>
+          <p class="error-title">You're a little off the map.</p>
+        </div>
+        
+        <p class="error-description">
+          Seems like this page wandered off somewhere.<br>
+          Don't worry — it happens to the best of us.<br>
+          Let's head back home and keep exploring together.
+        </p>
+        
+        <a href="index.html#works" class="button">
+          <span class="button-text">Explore Work</span>
+        </a>
+      </div>
+      
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/hacci/" class="social-link" target="_blank" rel="noopener">
+          <img class="social-icon" src="assets/img/182542aa8604d0e29449f1ca913dbc97180ea300.svg" alt="">
+          <span class="social-text">LinkedIn</span>
+        </a>
+        <a href="https://www.instagram.com/hajihye00/" class="social-link" target="_blank" rel="noopener">
+          <img class="social-icon" src="assets/img/182542aa8604d0e29449f1ca913dbc97180ea300.svg" alt="">
+          <span class="social-text">Instagram</span>
+        </a>
+        <a href="mailto:hajihye2096@gmail.com" class="social-link">
+          <img class="social-icon" src="assets/img/182542aa8604d0e29449f1ca913dbc97180ea300.svg" alt="">
+          <span class="social-text">Mail</span>
+        </a>
+      </div>
     </div>
   </body>
 </html>
