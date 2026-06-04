@@ -426,8 +426,10 @@ const VariantSection = () => (
       <FadeUp delay={0.08} className="mt-8 flex justify-center">
         <SvgAsset src={assets.variantBTop} alt="Version B 목업" className="w-[375px]" />
       </FadeUp>
-      <FadeUp delay={0.1} className="max-w-[1276px] mx-auto mt-12">
-        <Body className="text-center">디자인팀은 배달현황 확인을 덜 방해하는 B안을 추천했지만, 초기 리더십의 방향성은 가시성이 가장 높은 C안이었습니다.</Body>
+      <FadeUp delay={0.1} className="max-w-[960px] mx-auto mt-12 text-center">
+        <Body className="mx-auto text-center break-keep">
+          디자인팀은 배달현황 확인을 덜 방해하는 B안을 추천했지만, 초기 리더십의 방향성은 가시성이 가장 높은 C안이었습니다.
+        </Body>
       </FadeUp>
       <FadeUp delay={0.12} className="max-w-[1280px] mx-auto mt-14 grid xl:grid-cols-[790px_375px] gap-10 xl:gap-[114px] items-start justify-center">
         <SvgAsset src={assets.variantCompare} alt="Version B 비교 목업" className="w-[790px]" />
