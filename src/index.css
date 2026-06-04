@@ -1,0 +1,88 @@
+/* ─── Google Fonts ─────────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;900&display=swap');
+
+@import "tailwindcss" source(none);
+
+@source "../index.html";
+@source "./**/*.{ts,tsx}";
+
+@theme {
+  /* ── Font Families ────────────────────────────────────────────────────────── */
+  /* Inter: body, labels, numbers, English headings                              */
+  --font-sans: "Inter", "-apple-system", "BlinkMacSystemFont", "Helvetica Neue", "Arial", sans-serif;
+  /* display: Inter for English headings (weight 700–900 supported)             */
+  --font-display: "Inter", "Noto Sans KR", "-apple-system", sans-serif;
+  /* korean: Noto Sans KR first — for any explicit Korean text blocks           */
+  --font-korean: "Noto Sans KR", "Inter", sans-serif;
+
+  /* ── Brand / Primary ─────────────────────────────────────────────────────── */
+  --color-primary:        #2563EB;   /* Primary/Blue         */
+  --color-primary-soft:   #EFF6FF;   /* Primary/Blue Soft    */
+
+  /* ── Accent ──────────────────────────────────────────────────────────────── */
+  --color-accent-amber:   #D97706;   /* Accent/Amber         */
+  --color-accent-green:   #059669;   /* Accent/Green         */
+  --color-accent-purple:  #7245D0;   /* Accent/Purple        */
+
+  /* ── Text ────────────────────────────────────────────────────────────────── */
+  --color-text-title:         #111111;  /* primary label        */
+  --color-text-para:          #616161;  /* Text/Paragraph       */
+  --color-text-caption:       #999999;  /* Text/Caption         */
+  --color-text-caption-light: #BBBBBB;
+  --color-text-error:         #E02000;
+
+  /* ── Background ──────────────────────────────────────────────────────────── */
+  --color-bg-default:   #FFFFFF;   /* BG/Default           */
+  --color-bg-subtle:    #FCFCFC;
+  --color-bg-tertiary:  #F7F8F9;   /* BG/Tertiary          */
+  --color-bg-page:      #EBEBEB;   /* homepage bg          */
+
+  /* ── Border ──────────────────────────────────────────────────────────────── */
+  --color-border-default:   #EFEFEF;   /* Border/Default       */
+  --color-border-secondary: #DFDFDF;
+
+  /* ── Legacy aliases (kept for backward compat) ───────────────────────────── */
+  --color-line-green:      #2563EB;
+  --color-line-green-soft: #EFF6FF;
+  --color-line-blue:       #4D73FF;
+  --color-line-blue-soft:  #EEF2FF;
+}
+
+@layer base {
+  body {
+    @apply font-sans antialiased;
+    color: #111111;
+    background-color: #FFFFFF;
+    /* Inter as default — sharp, readable for English portfolio */
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Display headings: Inter for English, Noto Sans KR for Korean chars        */
+  h1, h2, h3 {
+    font-family: "Inter", "Noto Sans KR", "-apple-system", sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  /* Korean text should auto-switch to Noto Sans KR via lang attribute          */
+  :lang(ko) h1,
+  :lang(ko) h2,
+  :lang(ko) h3,
+  :lang(ko) p {
+    font-family: "Noto Sans KR", "Inter", sans-serif;
+  }
+
+  :lang(ko) body {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    line-break: strict;
+  }
+}
+
+/* ─── Utility: Korean body text ─────────────────────────────────────────────── */
+@layer utilities {
+  .font-ko {
+    font-family: "Noto Sans KR", "Inter", sans-serif;
+  }
+}
